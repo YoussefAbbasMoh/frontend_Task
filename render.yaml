@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: backend-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false  # Set this manually in Render dashboard
+        value: mongodb+srv://yoabbasabsai_db_user:7N2MZphasPMvL5uj@cluster0.kqeydvy.mongodb.net/backend-api?retryWrites=true&w=majority
+      - key: NODE_ENV
+        value: production
+
