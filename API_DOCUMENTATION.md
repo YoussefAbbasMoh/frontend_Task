@@ -2,7 +2,7 @@
 
 ## 🌐 Base URL
 ```
-https://backend-api-production-31ad.up.railway.app
+https://frontend-task-backend.vercel.app
 ```
 
 ## 📋 Table of Contents
@@ -320,7 +320,7 @@ All error responses follow this structure:
 ```typescript
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
-const API_BASE_URL = 'https://backend-api-production-31ad.up.railway.app';
+const API_BASE_URL = 'https://frontend-task-backend.vercel.app';
 
 // Types
 export interface User {
@@ -418,7 +418,7 @@ export const useAddUser = () => {
 ```typescript
 import { useQuery } from '@tanstack/react-query';
 
-const API_BASE_URL = 'https://backend-api-production-31ad.up.railway.app';
+const API_BASE_URL = 'https://frontend-task-backend.vercel.app';
 
 // Types
 export interface Role {
@@ -707,16 +707,16 @@ export interface HealthResponse {
 
 ```bash
 # Health Check
-curl https://backend-api-production-31ad.up.railway.app/health
+curl https://frontend-task-backend.vercel.app/health
 
 # Get All Users
-curl https://backend-api-production-31ad.up.railway.app/api/users
+curl https://frontend-task-backend.vercel.app/api/users
 
 # Get All Roles
-curl https://backend-api-production-31ad.up.railway.app/api/roles
+curl https://frontend-task-backend.vercel.app/api/roles
 
 # Add User
-curl -X POST https://backend-api-production-31ad.up.railway.app/api/users \
+curl -X POST https://frontend-task-backend.vercel.app/api/users \
   -H "Content-Type: application/json" \
   -d '{"name":"Test User","email":"test@example.com","roleId":1}'
 ```
@@ -725,12 +725,12 @@ curl -X POST https://backend-api-production-31ad.up.railway.app/api/users \
 
 ```javascript
 // Get All Users
-const response = await fetch('https://backend-api-production-31ad.up.railway.app/api/users');
+const response = await fetch('https://frontend-task-backend.vercel.app/api/users');
 const data = await response.json();
 console.log(data);
 
 // Add User
-const newUser = await fetch('https://backend-api-production-31ad.up.railway.app/api/users', {
+const newUser = await fetch('https://frontend-task-backend.vercel.app/api/users', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -748,7 +748,7 @@ console.log(result);
 ### Using Postman
 
 1. **Collection:** Create a new collection "Backend API"
-2. **Base URL:** `https://backend-api-production-31ad.up.railway.app`
+2. **Base URL:** `https://frontend-task-backend.vercel.app`
 3. **Endpoints:**
    - GET `/health`
    - GET `/api/users`
@@ -818,5 +818,5 @@ For issues or questions, please contact the backend team or refer to the reposit
 
 **Last Updated:** January 2024
 **API Version:** 1.0.0
-**Base URL:** `https://backend-api-production-31ad.up.railway.app`
+**Base URL:** `https://frontend-task-backend.vercel.app`
 
